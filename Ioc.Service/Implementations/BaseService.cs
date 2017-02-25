@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ioc.Autofac
+namespace Ioc.Service.Implementations
 {
-    class Program
+    public class BaseService : IBaseService
     {
-        static void Main(string[] args)
+        public void _write(string msg)
         {
-
+            Console.Write(msg);
         }
     }
 }

@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ioc.Autofac
+namespace Ioc.Core.Extensions
 {
-    class Program
+    public class AssemblyExtension
     {
-        static void Main(string[] args)
+        public void getClassType()
         {
 
         }
