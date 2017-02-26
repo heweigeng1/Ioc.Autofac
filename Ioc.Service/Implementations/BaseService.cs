@@ -10,7 +10,8 @@ namespace Ioc.Service.Implementations
     {
         public void _write(string msg)
         {
-            Console.Write(msg);
+            Console.WriteLine(msg);
+            Console.ReadKey();
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ioc.Core.Extensions
 {
-    public class AssemblyExtension
+    public class AssemblyExtensions
     {
         public void getClassType()
         {

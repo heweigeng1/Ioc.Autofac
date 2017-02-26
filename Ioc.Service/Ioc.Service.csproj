@@ -42,6 +42,8 @@
   <ItemGroup>
     <Compile Include="IBaseService.cs" />
     <Compile Include="Implementations\BaseService.cs" />
+    <Compile Include="Implementations\UserService.cs" />
+    <Compile Include="IUserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
