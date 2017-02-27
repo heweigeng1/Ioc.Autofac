@@ -21,8 +21,9 @@ namespace Ioc.Autofac
             //    var  manager = container.Resolve<IBaseService>();
             //    manager._write("我是一个工人");  //输出我是一个工人
             //}
-            Ioc<IBaseService>.RegisterInheritedTypes(typeof(IUserService).Assembly, typeof(BaseService));
-            Ioc<IUserService>.Get().Send("我测试ioc");
+            Core.Ioc.Ioc.RegisterInheritedTypes(typeof(IUserService).Assembly, typeof(BaseService));
+            Core.Ioc.Ioc.Get<IUserService>().Send("我测试ioc");
+            Core.Ioc.Ioc.Get<IBaseService>()._write("BASE");
         }
     }
 }

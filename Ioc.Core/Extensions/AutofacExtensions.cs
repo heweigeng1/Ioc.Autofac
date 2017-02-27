@@ -15,6 +15,7 @@ namespace Ioc.Core.Extensions
         {
             var allTypes = assembly.GetTypes();
             var baseInterfaces = baseType.GetInterfaces();//获取类型接口
+            container.RegisterType(baseType).AsImplementedInterfaces();
             foreach (var type in allTypes)
             {
                 if (type.BaseType != null && type.BaseType.GenericEq(baseType))
@@ -24,7 +25,7 @@ namespace Ioc.Core.Extensions
                     {
                         continue;
                     }
-                    container.RegisterType(type).AsImplementedInterfaces();
+                    container.RegisterType(type).As(typeInterface);
                 }
             }
         }

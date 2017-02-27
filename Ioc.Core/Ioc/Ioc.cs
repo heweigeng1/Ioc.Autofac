@@ -7,9 +7,10 @@ using System.Reflection;
 
 namespace Ioc.Core.Ioc
 {
-    public class Ioc<T>
+    public class Ioc
     {
         private static readonly ContainerBuilder _container;
+        private static  IContainer _Icontainer;
         static Ioc()
         {
             if (_container == null)
@@ -20,14 +21,11 @@ namespace Ioc.Core.Ioc
         public static void RegisterInheritedTypes(Assembly assembly, Type baseType)
         {
             _container.RegisterInheritedTypes(assembly, baseType);
+            _Icontainer= _container.Build();
         }
-        public static T Get()
+        public static T Get<T>()
         {
-            
-            using (IContainer _Icontainer=_container.Build())
-            {
-                return _Icontainer.Resolve<T>();
-            }
+            return _Icontainer.Resolve<T>();
         }
     }
 }
